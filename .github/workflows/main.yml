@@ -13,14 +13,14 @@ jobs:
        uses: actions/checkout@v6.0.2
        
      - name: Creating
-       run : echo "Hello friends created by ${{ vars.NAME }}"
+       run : echo "Hello friends created by ${{ vars.NAME }}-${{RUNNER.OS}}"
 
   my_second_job:
     name: my sec ob
     runs-on: ubuntu-latest
     steps:
      - name: creat_second
-       run:  echo "Hello my friend ${{ vars.NAME }}"
+       run:  echo "Hello my friend ${{ vars.NAME }}-${{RUNNER.OS}}"
     
        
   
