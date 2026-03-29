@@ -2,13 +2,13 @@ name: first jobs
 
 on: workflow_dispatch
 
-env:
-  NAME: Avnesh
 
 jobs:
   my_first_job:
     name: my_first job
     runs-on: ubuntu-latest
+    env:
+     NAME: Avnesh
     steps:
      - name: Checkout
        uses: actions/checkout@v6.0.2
