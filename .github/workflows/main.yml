@@ -2,24 +2,26 @@ name: first jobs
 
 on: workflow_dispatch
 
+env:
+  NAME: Avnesh
+
 jobs:
   my_first_job:
     name: my_first job
     runs-on: windows-latest
-    continue-on-error: true
     steps:
      - name: Checkout
        uses: actions/checkout@v6.0.2
        
      - name: Creating
-       run : writeffff "Hello friends"
+       run : write-host "Hello friends created by $NAME"
 
   my_second_job:
     name: my sec ob
     runs-on: ubuntu-latest
     steps:
      - name: creat_second
-       run:  echo "Hello Avnesh"
+       run:  echo "Hello my friend $NAME"
     
        
   
