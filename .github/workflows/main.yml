@@ -14,7 +14,7 @@ jobs:
        uses: actions/checkout@v6.0.2
        
      - name: Creating
-       run : write-host "Hello friends created by $NAME"
+       run : echo "Hello friends created by $NAME"
 
   my_second_job:
     name: my sec ob
