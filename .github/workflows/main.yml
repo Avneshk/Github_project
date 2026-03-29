@@ -1,6 +1,13 @@
 name: first jobs
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      infra_env:
+        description: 'Bhai kha p deploy karma h'
+        type: string
+        default: dev
+    
 
 
 jobs:
@@ -8,19 +15,8 @@ jobs:
     name: my_first job
     runs-on: ubuntu-latest
     steps:
-      
-     - name: Checkout
-       uses: actions/checkout@v6.0.2
-       
      - name: Creating
-       run : echo "Hello friends created by ${{ vars.NAME }}-${{RUNNER.OS}}"
-
-  my_second_job:
-    name: my sec ob
-    runs-on: ubuntu-latest
-    steps:
-     - name: creat_second
-       run:  echo "Hello my friend ${{ vars.NAME }}-${{RUNNER.OS}}"
-    
+       run: echo "ye pipeline ${{ github.event.inputs.infra_env }} me chategi by ${{ vars.NAME }}-${{ RUNNER.OS })" 
+       
        
   
