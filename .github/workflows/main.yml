@@ -7,6 +7,9 @@ jobs:
     name: my_first job
     runs-on: windows-latest
     steps:
+     - name: Checkout
+       uses: actions/checkout@v6.0.2
+       
      - name: Creating
        run : write-host "hello friends"
        
