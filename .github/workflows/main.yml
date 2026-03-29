@@ -13,8 +13,6 @@ jobs:
        uses: actions/checkout@v6.0.2
        
      - name: Creating
-       env:
-        NAME: Avnesh
        run : echo "Hello friends created by $NAME"
 
   my_second_job:
@@ -22,8 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: creat_second
-       env:
-        NAME: Avnesh
        run:  echo "Hello my friend $NAME"
     
        
