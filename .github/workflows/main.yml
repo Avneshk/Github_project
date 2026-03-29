@@ -4,19 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       infra_env:
-        description: 'Bhai kha p deploy karma h'
+        description: "Bhai kha p deploy karma h"
         type: string
         default: dev
     
-
-
 jobs:
   my_first_job:
     name: my_first job
     runs-on: ubuntu-latest
     steps:
-     - name: Creating
-       run: echo "ye pipeline ${{ github.event.inputs.infra_env }} me chategi by ${{ vars.NAME }}-${{ RUNNER.OS })" 
+      - name: Creating
+        run: echo "ye pipeline ${{ github.event.inputs.infra_env }} me chategi by ${{ vars.NAME }}-${{ RUNNER.OS }}" 
        
        
   
