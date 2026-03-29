@@ -1,11 +1,13 @@
-name: Hello work workflo1w
+name: first jobs
 
 on: workflow_dispatch
 
 jobs:
- my1_first_jobs:
-   name: my first job1
-   runs-on: ubuntu-latest
-   steps:
-     - name: creating
-       run : echo "Avnesh my first github pipeline"
+  my_first_job:
+    name: my_first job
+    runs-on: ubuntu-latest
+    steps:
+     - name: Creating
+       run : echo "hello friends"
+       
+  
